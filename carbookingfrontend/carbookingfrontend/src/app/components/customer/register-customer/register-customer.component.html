@@ -1,0 +1,212 @@
+<div class="background-color">
+  <div class="registration-container">
+    <h2 class="registration-heading">Customer Registration Page</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="registration-form">
+      
+      <div class="form-group">
+        <label for="Firstname">First Name:</label>
+        <input type="text" id="Firstname" formControlName="Firstname" required pattern="^[a-zA-Z]+$">
+        <div *ngIf="registrationForm.get('Firstname')?.hasError('required')">First Name is required.</div>
+        <div *ngIf="registrationForm.get('Firstname')?.hasError('pattern')">First Name should contain only letters.</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="Lastname">Last Name:</label>
+        <input type="text" id="Lastname" formControlName="Lastname" required pattern="^[a-zA-Z]+$">
+        <div *ngIf="registrationForm.get('Lastname')?.hasError('required')">Last Name is required.</div>
+        <div *ngIf="registrationForm.get('Lastname')?.hasError('pattern')">Last Name should contain only letters.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="Emailid">Email:</label>
+        <input type="email" id="Emailid" formControlName="Emailid" required>
+        <div *ngIf="registrationForm.get('Emailid')?.hasError('required')">Email is required.</div>
+        <div *ngIf="registrationForm.get('Emailid')?.hasError('email')">Invalid email format.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" formControlName="pwd" required>
+        <div *ngIf="registrationForm.get('pwd')?.hasError('required')">Password is required minLength(6).</div>
+        <div *ngIf="registrationForm.get('pwd')?.hasError('pwd')">minLength(6).</div>
+      </div>
+
+      <div class="form-group">
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB" formControlName="DOB" required>
+        <div *ngIf="registrationForm.get('DOB')?.hasError('required')">Date of Birth is required.</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="Gender">Gender:</label>
+        <select id="Gender" formControlName="Gender" required>
+          <option value="" disabled>Select a Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <div *ngIf="registrationForm.get('Gender')?.hasError('required')">Gender is required.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="Address">Address:</label>
+        <textarea id="Address" formControlName="Address" required></textarea>
+        <div *ngIf="registrationForm.get('Address')?.hasError('required')">Address is required.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="City">City:</label>
+        <input type="text" id="City" formControlName="City" required>
+        <div *ngIf="registrationForm.get('City')?.hasError('required')">City is required.</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="State">State:</label>
+        <input type="text" id="State" formControlName="State" required>
+        <div *ngIf="registrationForm.get('State')?.hasError('required')">State is required.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="Pincode">Pincode:</label>
+        <input type="text" id="Pincode" formControlName="Pincode" required pattern="^[0-9]{6}$">
+        <div *ngIf="registrationForm.get('Pincode')?.hasError('required')">Pincode is required.</div>
+        <div *ngIf="registrationForm.get('Pincode')?.hasError('pattern')">Invalid Pincode format (6 digits required).</div>
+      </div>
+
+      <div class="form-group">
+        <label for="Country">Country:</label>
+        <input type="text" id="Country" formControlName="Country" required>
+        <div *ngIf="registrationForm.get('Country')?.hasError('required')">Country is required.</div>
+      </div>
+ 
+      <div class="form-group">
+        <label for="Contactnumber">Contact Number:</label>
+        <input type="tel" id="Contactnumber" formControlName="Contactnumber" required pattern="^[0-9]{10}$">
+        <div *ngIf="registrationForm.get('Contactnumber')?.hasError('required')">Contact Number is required.</div>
+        <div *ngIf="registrationForm.get('Contactnumber')?.hasError('pattern')">Invalid Contact Number (10 digits required).</div>
+      </div>
+
+      <div class="form-group">
+        <label for="Whatsupnumber">WhatsApp Number:</label>
+        <input type="tel" id="Whatsupnumber" formControlName="Whatsupnumber" pattern="^[0-9]{10}$">
+        <div *ngIf="registrationForm.get('Whatsupnumber')?.hasError('pattern')">Invalid WhatsApp Number (10 digits required).</div>
+      </div>
+
+      <div class="form-group">
+        <label for="Aadharnumber">Aadhar Number:</label>
+        <input type="text" id="Aadharnumber" formControlName="Aadharnumber" pattern="^[0-9]{12}$">
+        <div *ngIf="registrationForm.get('Aadharnumber')?.hasError('pattern')">Invalid Aadhar Number (12 digits required).</div>
+      </div>
+
+      <button type="submit" [disabled]="!registrationForm.valid" class="submit-button">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="background-color">
+<div class="registration-container">
+    <h2 class="registration-heading">Admin Registration Page</h2>
+    <form (ngSubmit)="onSubmit()" #registrationForm="ngForm" class="registration-form">
+      
+      <div class="form-group">
+        <label for="Firstname">First Name:</label>
+        <input type="text" id="Firstname" name="Firstname" [(ngModel)]="Firstname" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="Lastname">Last Name:</label>
+        <input type="text" id="Lastname" name="Lastname" [(ngModel)]="Lastname" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="Emailid">Emailid:</label>
+        <input type="email" id="Emailid" name="Emailid" [(ngModel)]="Emailid" required>
+      </div>
+
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd" [(ngModel)]="pwd" required>
+      </div>
+
+      <div class="form-group">
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB" name="DOB" [(ngModel)]="DOB" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="Gender">Gender:</label>
+        <select id="Gender" name="Gender" [(ngModel)]="Gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="Address">Address:</label>
+        <textarea id="Address" name="Address" [(ngModel)]="Address" required></textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="City">City:</label>
+        <input type="text" id="City" name="City" [(ngModel)]="City" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="State">State:</label>
+        <input type="text" id="State" name="State" [(ngModel)]="State" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="Pincode">Pincode:</label>
+        <input type="text" id="Pincode" name="Pincode" [(ngModel)]="Pincode" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="Country">Country:</label>
+        <input type="text" id="Country" name="Country" [(ngModel)]="Country" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="Contactnumber">Contact Number:</label>
+        <input type="tel" id="Contactnumber" name="Contactnumber" [(ngModel)]="Contactnumber" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="Whatsupnumber">WhatsApp Number:</label>
+        <input type="tel" id="Whatsupnumber" name="Whatsupnumber" [(ngModel)]="Whatsupnumber">
+      </div>
+  
+      <div class="form-group">
+        <label for="Aadharnumber">Aadhar Number:</label>
+        <input type="text" id="Aadharnumber" name="Aadharnumber" [(ngModel)]="Aadharnumber">
+      </div>
+  
+      <button type="submit" [disabled]="!registrationForm.form.valid" class="submit-button">Submit</button>
+    </form>
+  </div>
+</div>
+   -->

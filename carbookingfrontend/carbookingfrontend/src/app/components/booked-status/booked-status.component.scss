@@ -1,0 +1,153 @@
+// .booking-status-container {
+//     max-width: 600px;
+//     margin: 0 auto;
+//     padding: 20px;
+//     border: 1px solid #ddd;
+//     background-color: #f5f5f5;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   }
+  
+//   h2 {
+//     font-size: 24px;
+//     margin-bottom: 10px;
+//   }
+  
+//   .booking-details {
+//     background-color: #ffffff;
+//     padding: 20px;
+//     border-radius: 5px;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   }
+  
+//   .booking-details p {
+//     margin-bottom: 10px;
+//   }
+  
+//   .booking-details strong {
+//     font-weight: bold;
+//   }
+  
+//   .background-color{
+//     padding: 170px;
+//     background: #7F7FD5;  /* fallback for old browsers */
+//     background: -webkit-linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+//     background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
+//     .alert{
+//       margin-top: -175px;
+//     }
+//   }
+
+//   .Backbtn{
+//     background-color: #007bff;
+//     color: #fff;
+//     padding: 10px 20px;
+//     border: none;
+//     border-radius: 3px;
+//     cursor: pointer;
+//   }
+
+//   .cancelbtn{
+//     margin-left: 30px;
+//     background-color: #ff0000;
+//     color: #fff;
+//     padding: 10px 20px;
+//     border: none;
+//     border-radius: 3px;
+//     cursor: pointer;
+//   }
+
+//   // .alert{
+//   //   margin-top: -150px;
+//   // }
+
+/* Styles for the outermost container */
+.background-color {
+  padding: 170px;
+  background: #7F7FD5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
+}
+
+/* Styles for the success message */
+.alert {
+  margin-top: -175px;
+}
+
+/* Styles for the booking status container */
+.booking-status-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the heading within the booking status container */
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Styles for the inner container holding booking details */
+.booking-details {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for paragraph elements within booking details */
+.booking-details p {
+  margin-bottom: 10px;
+}
+
+/* Styles for strong (bold) text within booking details */
+.booking-details strong {
+  font-weight: bold;
+}
+
+/* Common button styles */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Styles for the "Go Back" button */
+.btn-Backbtn {
+  background-color: #007bff;
+  color: #fff;
+  margin-right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Styles for the "Cancel" button */
+.btn-cancelbtn {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* Applying button styles */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+  color:#ff0000
+}

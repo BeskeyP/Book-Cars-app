@@ -1,0 +1,56 @@
+<div class="background-color">
+    <div class="post-carDetails-container">
+        <h2 class="post-carDetails-heading">Upload Car Details</h2>
+        <form (ngSubmit)="onSubmit()" #PostCarDetailsForm="ngForm" class="post-carDetails-form">
+          
+          <div class="form-group">
+            <label for="Carname">Car Name:</label>
+            <input type="text" id="Carname" name="Carname" [(ngModel)]="Carname" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="Carnumber">Car Number:</label>
+            <input type="text" id="Carnumber" name="Carnumber" [(ngModel)]="Carnumber" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="Color">Color:</label>
+            <input type="text" id="Color" name="Color" [(ngModel)]="Color" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="Fueltype">Fuel Type:</label>
+            <input type="text" id="Fueltype" name="Fueltype" [(ngModel)]="Fueltype" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="Milage">Milage:</label>
+            <input type="text" id="Milage" name="Milage" [(ngModel)]="Milage" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="Fuelcapacity">Fuel Capacity:</label>
+            <input type="text"  id="Fuelcapacity" name="Fuelcapacity" [(ngModel)]="Fuelcapacity" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="SeatDetails ">Seat Details :</label>
+            <input type="text" id="SeatDetails " name="SeatDetails " [(ngModel)]="SeatDetails " required>
+          </div>
+      
+          <div class="form-group">
+            <label for="Carimage">Car Image :</label>
+            <input type="text" id="Carimage " name="Carimage" [(ngModel)]="Carimage" required>
+          </div>
+
+          <div class="form-group">
+            <label for="RentAmount">Rent Amount:</label>
+            <input type="text" id="RentAmount" name="RentAmount" [(ngModel)]="RentAmount" required>
+          </div>
+      
+      
+          <button type="submit"  class="submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+      

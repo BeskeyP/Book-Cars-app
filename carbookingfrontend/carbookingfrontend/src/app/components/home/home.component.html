@@ -1,0 +1,18 @@
+<div class="background-color">
+<div class="seat-details-container">
+    <h1>Seat Details</h1>
+    <div *ngIf="SeatDetailsData.SeatCapacitydetails.length > 0; else noData">
+      <div *ngFor="let seat of SeatDetailsData.SeatCapacitydetails">
+
+      <div *ngIf="seat.IsActive === 1" class="seat-card" (click)="handleSeatClick(seat)">
+        <h2 >{{ seat.SeatDetails }} Seater</h2>
+      </div>
+      </div>
+    </div>
+    <ng-template #noData>
+      <p>No seat details available.</p>
+    </ng-template>
+  </div>
+</div> 
+
+  

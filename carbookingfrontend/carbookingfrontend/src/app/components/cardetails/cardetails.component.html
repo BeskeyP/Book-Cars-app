@@ -1,0 +1,68 @@
+<div class="car-details-container">
+  <h1>Car Details</h1>
+  <ng-container *ngIf="CarDetailsData.length > 0; else noData">
+    <div *ngFor="let car of CarDetailsData" class="car-card">
+      <div class="car-image">
+        <img [src]="car.Carimage" alt="Car Image">
+      </div>
+
+      <div class="car-info">
+        <h2>{{ car.Carname }}</h2>
+        <p>Car Number: {{ car.Carnumber }}</p>
+        <p>Color: {{ car.Color }}</p>
+        <p>Fuel Type: {{ car.Fueltype }}</p>
+        <p>Mileage: {{ car.Milage }}</p>
+        <p>Fuel Capacity: {{ car.Fuelcapacity }}</p>
+        <p>Seat Details: {{ car.SeatDetails }}</p>
+        <p>Rent Amount: {{ car.RentAmount }}</p>
+
+        <button class="book-button" (click)="bookCar(car)">Book Now</button>
+      </div>
+      
+    </div>
+  </ng-container>
+  <ng-template #noData>
+    <p>No car details available.</p>
+  </ng-template>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="car-details-container">
+    <h1>Car Details</h1>
+    <div *ngIf="CarDetailsData.length > 0; else noData">
+      <div *ngFor="let car of CarDetailsData" class="car-card">
+         <h2>Car Name: {{car.Carname }}</h2>
+        <p>Carnumber: {{ car.Carnumber }}</p>
+        <p>Color: {{ car.Color }}</p>
+        <p>Fueltype: {{ car.Fueltype }}</p>
+        <p>Milage: {{ car.Milage }}</p>
+        <p>Fuelcapacity: {{ car.Fuelcapacity }}</p>
+        <p>SeatDetails:{{ car.SeatDetails }}</p>
+        <p>Carimage: {{ car.Carimage }}</p>
+        <p>RentAmount: {{ car.RentAmount }}</p> 
+      </div>
+    </div>
+    <ng-template #noData>
+      <p>No car details available.</p>
+    </ng-template>
+  </div>
+   -->
+
+

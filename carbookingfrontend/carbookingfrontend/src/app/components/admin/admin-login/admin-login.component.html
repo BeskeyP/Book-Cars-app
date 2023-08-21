@@ -1,0 +1,28 @@
+
+<div class="background-color">
+<div class="login-container">
+  <h2 class="login-heading">Admin Login</h2>
+  <form class="login-form" (ngSubmit)="onSubmit()">
+      <label class="login-label" for="Emailid">Email:</label>
+      <input class="login-input" type="text" id="Emailid" [(ngModel)]="Emailid" name="Emailid" required>
+
+      <label class="login-label" for="pwd">Password:</label>
+      <input class="login-input" type="password" id="pwd" [(ngModel)]="pwd" name="pwd" required>
+
+      <div class="button-container">
+        <button class="login-button" type="submit">Login</button>
+        <button class="cancel-button" type="button" (click)="onCancelClick()">Cancel</button>
+        <button class="register-button" type="button" (click)="onAdminRegisterClick()">Register</button>
+
+
+        <!-- <button type="submit" (click)="onLoginClick()"><b>Login</b></button>
+        <button type="button" class="cancelbtn"><b>Cancel</b></button>
+        <button type="button" class="registerbtn" (click)="onRegisterClick()">
+          <b>Register</b>
+        </button> -->
+
+
+    </div>
+  </form>
+</div>
+</div>

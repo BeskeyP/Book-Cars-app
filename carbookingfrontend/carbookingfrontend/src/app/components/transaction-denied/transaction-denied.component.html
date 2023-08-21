@@ -1,0 +1,22 @@
+
+<div class="background-color">
+<div class="transaction-denied-form">
+    <h2>Booking Cancel Page</h2>
+    <form (ngSubmit)="submitForm()" #transactionDeniedForm="ngForm">
+      <div>
+        <label for="Transaction_id">Transaction ID:</label>
+        <input type="text" id="Transaction_id" name="Transaction_id" [(ngModel)]="transaction_Id" required>
+      </div>
+      <div>
+        <label for="CancelledDate">Cancelled Date:</label>
+        <input type="date" id="CancelledDate" name="CancelledDate" [(ngModel)]="cancelledDate" required>
+      </div>
+      <div>
+        <label for="Reason">Reason:</label>
+        <textarea id="Reason" name="Reason" [(ngModel)]="reason" required></textarea>
+      </div>
+      <button type="submit" [disabled]="!transactionDeniedForm.form.valid">Submit</button>
+    </form>
+  </div>
+</div>
+  

@@ -1,0 +1,23 @@
+<div class="background-color">
+<div class="alert alert-success">
+  <strong>Success!</strong> Booked Successfully.
+</div>
+
+
+<div class="booking-status-container">
+  <h2>Booking Status</h2>
+  <div class="booking-details">
+    <p><strong>Customer Registration ID:</strong> {{ bookingData.CustomerRegis_id }}</p>
+    <p><strong>Car Details ID:</strong> {{ bookingData.CarDetails_id }}</p>
+    <p><strong>Start Date:</strong> {{ bookingData.StartDate }}</p>
+    <p><strong>End Date:</strong> {{ bookingData.EndDate }}</p>
+    <p><strong>Net Amount:</strong> Rs.{{ bookingData.NetAmount }}</p>
+    <p><strong>Booking Status:</strong> {{ bookingData.BookingStatus }} !!</p>
+  </div>
+    <!-- Go Back Button -->
+    <button (click)="goBack()" class="btn btn-primary">Go Back</button>
+
+    <!-- Cancel Booking Button -->
+    <button (click)="confirmCancel()" class="btn btn-danger">Cancel Booking</button>
+</div>
+</div>

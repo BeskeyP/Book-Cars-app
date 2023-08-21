@@ -1,0 +1,47 @@
+<div class="background-color">
+<div class="carbooking">
+  <h1>Booking Details</h1>
+  <div class="car-image">
+    <img [src]="selectedcar.Carimage" alt="Car Image">
+  </div>
+  <h2>Name: {{ selectedcar.Carname }}</h2>
+  <p>Color: {{ selectedcar.Color }}</p>
+  <p>Fuel Type: {{ selectedcar.Fueltype }}</p>
+  <p>Mileage: {{ selectedcar.Milage }}</p>
+  <p>Fuel Capacity: {{ selectedcar.Fuelcapacity }}</p>
+  <p>Seat Details: {{ selectedcar.SeatDetails }}</p>
+  <p>Rent Amount: {{ selectedcar.RentAmount }}</p>
+
+  <form #bookcars="ngForm" class="booking-cars">
+    <div class="form-group">
+      <label for="StartDate">Start Date:</label>
+      <input type="date" id="StartDate" name="StartDate" [(ngModel)]="StartDate" required (ngModelChange)="onChange()" required>
+    </div>
+
+    <div class="form-group">
+      <label for="EndDate">End Date:</label>
+      <input type="date" id="EndDate" name="EndDate" [(ngModel)]="EndDate" required (ngModelChange)="onChange()" required>
+    </div>
+    <div class="form-group">
+      <label for="RentAmount">Rent Amount:</label>
+      <input type="text" id="RentAmount" name="RentAmount" [(ngModel)]="RentAmount" disabled>
+    </div>
+    <div class="form-group">
+      <label for="NetAmount">Net Amount:</label>
+      <input type="text" id="NetAmount" name="NetAmount" [(ngModel)]="NetAmount" disabled>
+    </div>
+
+    <div class="form-group">
+      <label for="CustomerRegis_id">CustomerRegis_id:</label>
+      <input type="text" id="CustomerRegis_id" name="CustomerRegis_id" [(ngModel)]="CustomerRegis_id" required>
+    </div>
+
+    <!-- <div class="form-group">
+      <label for="BookingStatus">BookingStatus:</label>
+      <input type="text" id="BookingStatus" name="BookingStatus" [(ngModel)]="BookingStatus" disabled>
+    </div> -->
+
+    <button type="button" (click)="onSubmit()">Book</button>
+  </form>
+</div>
+</div>

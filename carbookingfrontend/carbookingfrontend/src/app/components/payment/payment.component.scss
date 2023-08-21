@@ -1,0 +1,68 @@
+.payment-container {
+    display:grid;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    padding-top: 20px;
+  }
+  
+  .payment-summary {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .payment-form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+//   button {
+//     background-color: #007bff;
+//     color: #fff;
+//     padding: 10px 20px;
+//     border: none;
+//     border-radius: 3px;
+//     cursor: pointer;
+//   }
+  
+  .background-color{
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
+    padding: 80px;
+  }
+
+  .pay-button{
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .cancel-button{
+    margin-left: 30px;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }

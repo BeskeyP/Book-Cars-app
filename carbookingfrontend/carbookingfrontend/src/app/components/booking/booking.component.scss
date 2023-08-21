@@ -1,0 +1,113 @@
+.carbooking {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .car-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .car-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  .booking-cars {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="date"],
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media Query for smaller screens */
+  @media screen and (max-width: 480px) {
+    .carbooking {
+      padding: 15px;
+    }
+    
+    .car-image {
+      margin-bottom: 15px;
+    }
+    
+    h1 {
+      font-size: 20px;
+    }
+    
+    h2 {
+      font-size: 18px;
+    }
+    
+    p {
+      font-size: 14px;
+    }
+    
+    input[type="date"],
+    input[type="text"] {
+      padding: 8px;
+    }
+  }
+  
+  .background-color{
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #91EAE4, #86A8E7, #7F7FD5);
+  }
